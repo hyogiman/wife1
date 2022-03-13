@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        여보꾸 사랑해요~
+    </title>
+    <meta charset="utf-8">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+            .cntnt {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                border: 1px solid rgb(0, 0, 0);
+                background-color: rgb(151, 204, 247);
+                padding: 0px 15px;
+            }
+
+            .btcnt{
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }
+
+            #bt1 {
+                background-color: rgb(0, 14, 54); 
+                border: none; 
+                color:white; 
+                padding: 15px 30px; 
+                text-align:center; 
+                font-size: 16px; 
+                margin: 4px 4px; 
+                cursor: pointer;
+            }
+            .center{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 30%;
+            }
+
+            #button1 {
+                background-color: rgb(133, 165, 255); 
+                border: none; 
+                color:rgb(0, 0, 0); 
+                padding: 10px 20px; 
+                text-align:center; 
+                font-size: 15px; 
+                margin: 4px 4px; 
+                cursor: pointer;
+            }
+
+        </style>
+
+        <h1 style="font-family: 'jua', sans-serif; text-align: center;">★여보 생일기념 이벤트★</h1>
+    </head>
+    <body>
+        <div class="cntnt">
+            <h2 style="font-family: 'jua', sans-serif; text-align: center;">정말 마지막 문제!<br>여보와 함께간 여행 4(장인어른 장모님이랑 간 근교 산책)</h2><br><br><br>
+            <p style="font-family: 'jua', sans-serif; text-align: center;">장인어른 장모님과 함께 김천 들러서 맛있는거 먹은날!<br>이날 맛있는 능이해신탕도 먹고 머루도 데려 왔었지.<br>지금은 도망간 머루지만 잘 살고 있겠지?<br>그때 갔던 그 절 이름이 기억이 나는지?</p><br><br>
+            <p style="font-family: 'jua', sans-serif; text-align: center;"> 자 그럼 여기서 문제!<br>우리 4식구가 간 그 절 이름은 무엇일까?<br>한글로 입력!</p><br>
+            <img src="9_0.jpg" class="center">
+            <img src="9.jpg" class="center">
+        </div>
+        <br>
+
+        <form name="myForm" onsubmit="return validateForm()" method="GET" style="font-family: 'jua', sans-serif; font-size: 30px; text-align: center;">
+            정답: <input type="text" name="fname" style="font-family: 'jua', sans-serif; font-size: 30px; width: 200px; height: 50px; margin-bottom: 0;">
+            <input type="submit" value="확인!" style="font-family: 'jua', sans-serif; font-size: 30px; width: 100px; height:55px; margin-bottom: 0px;">
+
+        <script>
+            function validateForm() {
+              var x = document.forms["myForm"]["fname"].value;
+              if (x == "") {
+                alert("내용이 입력되지 않았습니다.");
+                return false;
+              }
+              if (x=="직지사"){
+                  alert("정답! 올해는 장인어른 장모님이랑 제주도 여행 콜?");
+                  document.getElementById("dd").style.display ="block";
+                  document.getElementById("mimage").style.display ="block";                      
+                  return false;
+              }else{
+                  alert("땡! 틀렸습니다.");
+                  return false;
+              }
+            }
+        </script>
+    </p>
+    <p id="dd" style="display: none;">여보 여기에 여보를 위한 선물을 넣어뒀어<br>아래 힌트를 따라가시오!
+    <br><br>내가 산 기계장치중 1년에 몇번 안쓰는 대표 가전<br>하아.. 그래도 자주쓸고얌.</p><br>
+    <img id ="mimage" src="final.jpg" style="width: 600px; display: none;" class="center">
+
+        
+    </body>

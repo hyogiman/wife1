@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        여보꾸 사랑해요~
+    </title>
+    <meta charset="utf-8">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+            .cntnt {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                border: 1px solid rgb(0, 0, 0);
+                background-color: rgb(151, 204, 247);
+                padding: 0px 15px;
+            }
+
+            .btcnt{
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }
+
+            #bt1 {
+                background-color: rgb(0, 14, 54); 
+                border: none; 
+                color:white; 
+                padding: 15px 30px; 
+                text-align:center; 
+                font-size: 16px; 
+                margin: 4px 4px; 
+                cursor: pointer;
+            }
+            .center{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 30%;
+            }
+
+            #button1 {
+                background-color: rgb(133, 165, 255); 
+                border: none; 
+                color:rgb(0, 0, 0); 
+                padding: 10px 20px; 
+                text-align:center; 
+                font-size: 15px; 
+                margin: 4px 4px; 
+                cursor: pointer;
+            }
+
+        </style>
+
+        <h1 style="font-family: 'jua', sans-serif; text-align: center;">★여보 생일기념 이벤트★</h1>
+    </head>
+    <body>
+        <div class="cntnt">
+            <h2 style="font-family: 'jua', sans-serif; text-align: center;">첫 번째 문제!<br>여보와 함께간 여행 1(남도 캠핑)</h2><br><br><br>
+            <p style="font-family: 'jua', sans-serif; text-align: center;"> 여보가 함께간 증도 여행 기억나?<br>여보가 바람분다고 바다캠핑 싫다고 찡찡댔는데 가서 대만족한 그 캠핑!<br>그 캠핑에 대한 문제야!<br>우리가 이 증도 설레미 캠핑장 몇번 사이트를 예약해서 묵었을까? <br>숫자로 입력!</p><br><br>
+            <img src="3.jpg" class="center">
+        </div>
+        <br>
+
+        <form name="myForm" onsubmit="return validateForm()" method="GET" style="font-family: 'jua', sans-serif; font-size: 30px; text-align: center;">
+            정답: <input type="text" name="fname" style="font-family: 'jua', sans-serif; font-size: 30px; width: 200px; height: 50px; margin-bottom: 0;">
+            <input type="submit" value="확인!" style="font-family: 'jua', sans-serif; font-size: 30px; width: 100px; height:55px; margin-bottom: 0px;">
+
+        <script>
+            function validateForm() {
+              var x = document.forms["myForm"]["fname"].value;
+              if (x == "") {
+                alert("내용이 입력되지 않았습니다.");
+                return false;
+              }
+              if (x=="7"){
+                  alert("정답! 잘했어 여보! 우리 그 곳에서 매우 좋았자나! 올해도 또가자!");
+                  document.getElementById("dd").style.display ="block";
+                  document.getElementById("mimage").style.display ="block";                      
+                  return false;
+              }
+              if (x=="7번"){
+                  alert("정답! 잘했어 여보! 우리 그 곳에서 매우 좋았자나! 올해도 또가자!");
+                  document.getElementById("dd").style.display ="block";
+                  document.getElementById("mimage").style.display ="block";                      
+                  return false;
+              
+                }else{
+                  alert("땡! 틀렸습니다.");
+                  return false;
+              }
+            }
+        </script>
+    </p>
+    <p id="dd" style="display: none;">자 이제 다음 큐알은?<br>아래 힌트를 따라가시오!
+    <br><br>나중에 코로나 끝나고.. <br>스페인 문화속 그 사이에서 산다면 얼마나 행복할까?</p><br>
+    <img id ="mimage" src="4.jpg" style="width: 600px; display: none;" class="center">
+
+        
+    </body>

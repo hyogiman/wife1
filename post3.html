@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        여보꾸 사랑해요~
+    </title>
+    <meta charset="utf-8">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+            .cntnt {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                border: 1px solid rgb(0, 0, 0);
+                background-color: rgb(151, 204, 247);
+                padding: 0px 15px;
+            }
+
+            .btcnt{
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }
+
+            #bt1 {
+                background-color: rgb(0, 14, 54); 
+                border: none; 
+                color:white; 
+                padding: 15px 30px; 
+                text-align:center; 
+                font-size: 16px; 
+                margin: 4px 4px; 
+                cursor: pointer;
+            }
+            .center{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 30%;
+            }
+
+            #button1 {
+                background-color: rgb(133, 165, 255); 
+                border: none; 
+                color:rgb(0, 0, 0); 
+                padding: 10px 20px; 
+                text-align:center; 
+                font-size: 15px; 
+                margin: 4px 4px; 
+                cursor: pointer;
+            }
+
+        </style>
+
+        <h1 style="font-family: 'jua', sans-serif; text-align: center;">★여보 생일기념 이벤트★</h1>
+    </head>
+    <body>
+        <div class="cntnt">
+            <h2 style="font-family: 'jua', sans-serif; text-align: center;">두 번째 문제!<br>여보와 함께간 여행 2(전국 맛집탐방)</h2><br><br><br>
+            <p style="font-family: 'jua', sans-serif; text-align: center;">내가 휴가를 길게내고 떠난 캠핑/낚시/겸 휴가<br>한산도 캠핑 갔다가 여수가서 태풍맞고 후퇴했는데<br>그때 올라오면서 쭈꾸미 조졌자나<br>그 이후에 우리가 또 맛집탐방을 떠났는데..<br>그 곳에서 먹은 물쫄면 기억나지?</p><br><br>
+            <p style="font-family: 'jua', sans-serif; text-align: center;"> 자 그럼 여기서 문제!<br>이 식당에서 물쫄면 곱배기, 비빔쫄면 곱배기, 김밥 1인분을 시키면 얼마일까?<br>숫자로 입력!</p><br>
+            <img src="5.jpg" class="center">
+        </div>
+        <br>
+
+        <form name="myForm" onsubmit="return validateForm()" method="GET" style="font-family: 'jua', sans-serif; font-size: 30px; text-align: center;">
+            정답: <input type="text" name="fname" style="font-family: 'jua', sans-serif; font-size: 30px; width: 200px; height: 50px; margin-bottom: 0;">
+            <input type="submit" value="확인!" style="font-family: 'jua', sans-serif; font-size: 30px; width: 100px; height:55px; margin-bottom: 0px;">
+
+        <script>
+            function validateForm() {
+              var x = document.forms["myForm"]["fname"].value;
+              if (x == "") {
+                alert("내용이 입력되지 않았습니다.");
+                return false;
+              }
+              if (x=="20000"){
+                  alert("정답! 생각만 해도 침이 넘어간다. 내가 그렇게 시켜먹고 싶어서 이 문제 냈어 크크");
+                  document.getElementById("dd").style.display ="block";
+                  document.getElementById("mimage").style.display ="block";                      
+                  return false;
+              }
+              if (x=="20000원"){
+                  alert("정답! 생각만 해도 침이 넘어간다. 내가 그렇게 시켜먹고 싶어서 이 문제 냈어 크크");
+                  document.getElementById("dd").style.display ="block";
+                  document.getElementById("mimage").style.display ="block";                      
+                  return false;
+              
+                }else{
+                  alert("땡! 틀렸습니다.");
+                  return false;
+              }
+            }
+        </script>
+    </p>
+    <p id="dd" style="display: none;">자 이제 다음 큐알은?<br>아래 힌트를 따라가시오!
+    <br><br>여보가 방구끼면... <br>큐알이 죽을지도 몰라..</p><br>
+    <img id ="mimage" src="6.jpg" style="width: 600px; display: none;" class="center">
+
+        
+    </body>
